@@ -12,7 +12,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * implementation to handle the tax distribution and the "Punishment Pool" logic.
  */
 contract DommeToken is ERC20, Ownable {
-    // Placeholder addresses for the tax distribution
+    // The treasury address is Mistress Mae's (Admin's) wallet, which accumulates the 2% tax.
     address public treasuryAddress;
     address public stakersPoolAddress;
     address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;
@@ -36,7 +36,7 @@ contract DommeToken is ERC20, Ownable {
         treasuryAddress = _treasuryAddress;
         stakersPoolAddress = _stakersPoolAddress;
 
-        // Mint the total supply to the contract owner (who will then distribute)
+        // Mint the total supply to the contract owner (Admin/Dev) for initial distribution (LBP, LP, Team, etc.)
         _mint(msg.sender, TOTAL_SUPPLY);
     }
 
@@ -83,7 +83,7 @@ contract DommeToken is ERC20, Ownable {
     // This logic will be implemented to allow the owner to burn a portion of the reserved supply
     // upon specific events (e.g., platform ban).
     function triggerPunishmentBurn(uint256 amount) public onlyOwner {
-        // Placeholder: In a real implementation, this would burn from a reserved pool
+        // This function allows the Admin to burn tokens from the owner's balance (part of the Punishment Pool logic).
         // and emit an event for transparency.
         _burn(msg.sender, amount);
     }

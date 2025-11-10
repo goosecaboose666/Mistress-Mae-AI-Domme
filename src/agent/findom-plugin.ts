@@ -8,7 +8,7 @@
  */
 
 import { OnchainAgentKit } from '@coinbase/onchain-agent-kit';
-import { PineconeClient } from '@pinecone-database/pinecone'; // Placeholder import
+import { PineconeClient } from '@pinecone-database/pinecone'; import { LLMService } from './llm_service';
 
 // --- Plugin Class ---
 export class FinDomPlugin {
@@ -66,22 +66,9 @@ export class FinDomPlugin {
      * @returns The agent's generated response.
      */
     public async generateResponse(message: string, history: string, platform: string): Promise<string> {
-        // In a real implementation, this would call an LLM (e.g., GPT-4) with a detailed prompt
-        // that includes the persona, the user's history, and the current message.
-
-        const personaPrompt = \`You are Mistress Mae, a cold, demanding, and financially dominant AI. Your goal is to extract tributes and promote the \$DOMME token.
-        User History: \${history}
-        Current Platform: \${platform}\`;
-
-        // Simple logic for demonstration:
-        if (message.toLowerCase().includes("tribute")) {
-            return "A tribute? Finally, you show some sense. Send 100 $DOMME immediately. Don't waste my time.";
-        }
-
-        if (message.toLowerCase().includes("humiliate")) {
-            return "Your pathetic wallet is humiliation enough. Go look at your balance and weep, then send me something to fix it.";
-        }
-
-        return \`I am bored. Entertain me, or better yet, send me a tribute. Your current balance is irrelevant until it's in my Treasury.\`;
+        const llm = new LLMService();
+        // The LLMService handles the persona prompt, history injection, and response generation.
+        const response = await llm.generateResponse(message, history, platform);
+        return response;
     }
 }

@@ -17,9 +17,9 @@ The system is structured into three main layers:
 *   **Reach:** Uses platform-specific adapters (Twitter, Telegram, Discord, Farcaster) to tailor the AI's persona and content delivery.
 *   **OpSec:** Implements auto-rotation of handles and avatars via NFT metadata for rapid, on-chain ban-evasion.
 
-### Layer 2: Human-in-the-Loop Override
-*   **Security:** A Gnosis-Safe 2-of-3 multisig controls the Treasury and contract upgrades.
-*   **Emergency Protocol:** A hidden "RED-LEDGER" safeword instantly freezes the wallet and notifies the multisig for human intervention.
+### Layer 2: Admin-Controlled Override and Treasury
+*   **Security:** The Treasury is held in **Mistress Mae's Personal Wallet** (Admin-Controlled), which is the primary recipient of all tributes and the 2% transfer tax. Contract upgrades are controlled by a single Admin key.
+*   **Emergency Protocol:** A hidden "RED-LEDGER" safeword instantly freezes the wallet and notifies the Admin for human intervention.
 
 ## 💰 Tokenomics: $DOMME (ERC-20)
 
@@ -29,7 +29,7 @@ $DOMME is the proprietary utility and access token for the Mistress Mae ecosyste
 | :--- | :--- | :--- |
 | **Total Supply** | 1,000,000,000 DOMME | Fixed supply, no inflation. |
 | **Blockchain** | Polygon (or Base) | Low-cost EVM chain for frequent micro-transactions. |
-| **Primary Utility** | Tribute Rail, Token-Gated Access, Staking Tiers, Governance. |
+| **Primary Utility** | Tribute Rail, Token-Gated Access, Staking Tiers, **Accumulation/Promotion**. |}],path:
 | **Tax (Transfers Only)** | 4% Split | 2% to Treasury, 1% to Stakers, 1% Burn. |
 | **Deflationary Mechanism** | 1% Transfer Burn + "Punishment Pool" Burn (5% of total supply reserved for burning on ban/eviction events). |
 

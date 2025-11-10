@@ -28,7 +28,7 @@ export class MistressMaeAgent {
         // Initialize the Onchain Agent Kit
         this.kit = new OnchainAgentKit({
             walletAddress: AGENT_CONFIG.walletAddress,
-            // Other necessary web3 providers and configs
+                        // Other necessary web3 providers and configs
         });
 
         // Initialize Pinecone Memory (Placeholder)
@@ -62,20 +62,20 @@ export class MistressMaeAgent {
             return this.finDomPlugin.getGatedResponse(userId);
         }
 
-        // 3. Memory Retrieval
+                // 3. Memory Retrieval
         const history = await this.memory.fetchUserHistory(userId);
 
-        // 4. Dialogue Generation (using the FinDom Plugin)
+                // 4. Dialogue Generation (using the FinDom Plugin)
         const response = await this.finDomPlugin.generateResponse(message, history, platform);
 
-        // 5. Post-Processing and Onchain Action Check
+                // 5. Post-Processing and Onchain Action Check
         // If the response contains a tribute request, generate an EIP-681 QR code via the kit.
         if (response.includes("tribute")) {
             const tributeQR = await this.kit.generateEIP681QR(AGENT_CONFIG.walletAddress, "DOMME", 100); // Example: 100 DOMME
             return \`\${response}\n\nSend your tribute here: \${tributeQR}\`;
         }
 
-        // 6. Update Memory
+                // 6. Update Memory
         await this.memory.updateUserHistory(userId, message, response);
 
         return response;

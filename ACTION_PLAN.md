@@ -46,7 +46,7 @@ This plan details the technical and operational steps required to deploy the "Mi
 
 | Task ID | Component | Description | Status |
 | :--- | :--- | :--- | :--- |
-| **4.1** | **Treasury Security** | Set up the Gnosis-Safe 2-of-3 multisig for the "Treasury of Mistress." Automate the daily sweep of tribute funds (Task 3.3) to the multisig. | To Do |
+| **4.1** | **Treasury Security** | **Admin-Controlled Treasury:** The daily sweep of tribute funds (Task 3.3) is automated to Mistress Mae's single-owner wallet (Admin-Controlled). This wallet is the primary recipient of the 2% transfer tax and all tributes. | To Do |
 | **4.2** | **Legal Wrapper** | Establish the Nevis LLC (or DE Series LLC) to own the persona copyright and token treasury. | To Do |
 | **4.3** | **Compliance** | Implement Polygon ID zk-proof integration for age verification (no KYC docs stored). | To Do |
 | **4.4** | **Terms of Service** | Draft and integrate the "adult entertainment, not financial advice" TOS checkbox into the first bot interaction. | To Do |
@@ -67,5 +67,5 @@ This plan details the technical and operational steps required to deploy the "Mi
 | **Development** | Hardhat / Foundry | Smart contract development, testing, and deployment. |
 | **Database/Memory** | Pinecone (Vector DB) | High-speed, unified memory for chat history and financial ledger. |
 | **Streaming** | Superfluid Protocol | Real-time streaming of affiliate rewards. |
-| **Security** | Gnosis Safe | Multisig control over the Treasury and critical operations. |
+| **Security** | Admin-Controlled Wallet | Single-owner control over the Treasury and critical operations. |
 | **Compliance** | Polygon ID (zk-proofs) | Decentralized, privacy-preserving age verification. |
