@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "**Mistress Mae** is a pseudo-autonomous, token-gated AI agent designed for the financial domination (FinDom) niche. Built on the **ElizaOS** protocol and integrated with the **Coinbase Onchain Agent Kit**, Mae operates as a sophisticated, stateful conversational AI that leverages Web3 technology to create a secure, scalable, and gamified tribute system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goosecaboose666/Mistress-Mae-AI-Domme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/goosecaboose666/Mistress-Mae-AI-Domme/issues"
+  },
+  "homepage": "https://github.com/goosecaboose666/Mistress-Mae-AI-Domme#readme",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@types/node": "^24.10.1",
+    "dotenv": "^17.2.3",
+    "ethers": "^5.8.0",
+    "hardhat": "^3.0.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
